@@ -6,10 +6,35 @@
 //
 
 import SwiftUI
+var image = Constants.testTitleURL
 
 struct HomeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            AsyncImage(url: URL (string: image)) { image in
+                image
+                    .resizable()
+                    .scaledToFit()
+                    
+            } placeholder: {
+                ProgressView()
+            }
+            
+            HStack{
+                Button {
+                    
+                } label: {
+                    Text(Constants.playString)
+                    .ghostButton()
+                }
+                Button {
+                    
+                } label: {
+                    Text(Constants.downloadString)
+                    .ghostButton()
+                }
+            }
+        }
     }
 }
 
