@@ -9,6 +9,7 @@ struct Constants {
     static let searchString = "Search"
     static let downloadString = "Download"
     static let playString = "Play"
+    static let TrendingMoviesString = "Trending Movies"
     
     
     // icons
